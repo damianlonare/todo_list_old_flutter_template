@@ -4,9 +4,10 @@ import 'package:meta/meta.dart';
 import 'package:equatable/equatable.dart';
 import 'package:bloc/bloc.dart';
 
-import 'package:clean_onboarding/components/authentication/authentication.dart';
 import 'package:clean_onboarding/data/onboarding_calls/onboarding_endpoints.dart';
 import 'package:clean_onboarding/models/user_logged.dart';
+
+import '../auth/authentication_bloc.dart';
 
 part 'signup_event.dart';
 part 'signup_state.dart';

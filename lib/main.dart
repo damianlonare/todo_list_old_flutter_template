@@ -25,18 +25,18 @@ class MyStatelessWidget extends StatelessWidget {
   static List listItems = [
     {
       'height': 50.0,
-      'color': Colors.blue,
-      'textContent': const Center(child: Text('holi')),
+      'color': 0xFFFF5733,
+      'textContent': 'que ondaa',
     },
     {
       'height': 50.0,
-      'color': Colors.yellow,
-      'textContent': const Center(child: Text('jejejeje'))
+      'color': 0xFF33FF58,
+      'textContent': 'Hola?',
     },
     {
       'height': 50.0,
-      'color': Colors.red,
-      'textContent': const Center(child: Text('ADIOSS'))
+      'color': 0xFF0088CC,
+      'textContent': 'Aaaadios',
     }
   ];
 
@@ -44,29 +44,16 @@ class MyStatelessWidget extends StatelessWidget {
     (item) {
       return Container(
         height: item['height'],
-        color: item['color'],
-        child: item['textContent'],
+
+        // One example of HEX code would look like #0077CC.
+        //
+        // Replace # with 0xFF, so it becomes 0xFF0077CC
+        // Your custom color is ready Color(0xFF0077CC)
+        color: new Color(item['color']),
+        child: Center(child: Text(item['textContent'])),
       );
     }
   ).toList();
-
-  // List<Widget> listOfWidgets = [
-  //   Container(
-  //     height: 50,
-  //     color: Colors.blue[500],
-  //     child: const Center(child: Text('Entry A')),
-  //   ),
-  //   Container(
-  //     height: 50,
-  //     color: Colors.amber[500],
-  //     child: const Center(child: Text('Entry B')),
-  //   ),
-  //   Container(
-  //     height: 50,
-  //     color: Colors.red[500],
-  //     child: const Center(child: Text('Entry C')),
-  //   ),
-  // ];
 
   @override
   Widget build(BuildContext context) {
